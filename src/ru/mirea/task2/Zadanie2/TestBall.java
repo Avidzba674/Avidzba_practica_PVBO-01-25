@@ -1,3 +1,5 @@
+package ru.mirea.task2.Zadanie2;
+
 public class TestBall {
     public static void main(String[] args) {
         Ball b1 = new Ball(1.5, 2.5);

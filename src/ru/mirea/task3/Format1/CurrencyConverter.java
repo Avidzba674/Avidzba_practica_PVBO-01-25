@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class CurrencyConverter {
-    // Курсы условные (за 1 единицу валюты -> RUB)
     private static final double USD_TO_RUB = 95.50;
     private static final double EUR_TO_RUB = 103.20;
     private static final double CNY_TO_RUB = 13.40;

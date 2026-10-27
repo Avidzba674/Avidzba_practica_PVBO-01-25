@@ -1,6 +1,8 @@
+package ru.mirea.task2.Zadanie1;
+
 public class TestAuthor {
     public static void main(String[] args) {
-        Author author = new Author("Иван Петров", "ivan@mail.ru", 'M');
+        Author author = new Author("Иван Петров", "ivan@mail.ru", 'M'); // создает новый объект
         System.out.println(author);
 
         author.setEmail("newemail@mail.ru");

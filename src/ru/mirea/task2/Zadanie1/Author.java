@@ -1,10 +1,12 @@
+package ru.mirea.task2.Zadanie1;
+
 public class Author {
-    private String name;
+    private final String name; //const
     private String email;
-    private char gender;
+    private final char gender;
 
     public Author(String name, String email, char gender) {
-        this.name = name;
+        this.name = name; // ссылка на текущий объект
         this.email = email;
         this.gender = gender;
     }
@@ -25,7 +27,7 @@ public class Author {
         return gender;
     }
 
-    @Override
+    @Override // указывает компилятору, что берет готовый метод от родительского класса
     public String toString() {
         return "Author[name=" + name + ",email=" + email + ",gender=" + gender + "]";
     }

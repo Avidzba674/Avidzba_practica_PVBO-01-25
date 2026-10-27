@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class BookShelf {
-    private ArrayList<Book> books = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
 
     public void addBook(Book b) {
         books.add(b);

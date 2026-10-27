@@ -1,19 +1,20 @@
+package ru.mirea.task1;
 import java.util.Scanner;
 
-public class zadanie2 {
+public class Zadanie2 { // программа считает сумму, максимальное и минимальное число
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // scanner - это читатель, который подключается в клавиатуре
         System.out.print("Введите размер массива: ");
         int size = scanner.nextInt();
 
         int[] numbers = new int[size];
 
         System.out.println("Введите элементы массива:");
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) { //создание пустого массива из 5 нулей
             numbers[i] = scanner.nextInt();
         }
 
-        int sumWhile = 0;
+        int sumWhile = 0; // цикл с предусловием
         int indexWhile = 0;
         while (indexWhile < numbers.length) {
             sumWhile += numbers[indexWhile];
@@ -21,7 +22,7 @@ public class zadanie2 {
         }
         System.out.println("Сумма (while): " + sumWhile);
 
-        int sumDoWhile = 0;
+        int sumDoWhile = 0; // цикл с постусловием
         int indexDo = 0;
         if (numbers.length > 0) {
             do {

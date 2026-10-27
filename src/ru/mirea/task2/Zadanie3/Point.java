@@ -1,3 +1,5 @@
+package ru.mirea.task2.Zadanie3;
+
 public class Point {
     private double x;
     private double y;

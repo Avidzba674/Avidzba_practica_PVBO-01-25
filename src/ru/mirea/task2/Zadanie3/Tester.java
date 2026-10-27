@@ -1,5 +1,7 @@
-public class Tester {
-    private Circle[] circles;
+package ru.mirea.task2.Zadanie3;
+
+public class Tester { // имитирует хранение и вывод информации о фигурах
+    private final Circle[] circles;
     private int count;
 
     public Tester(int size) {
