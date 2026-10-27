@@ -1,16 +1,16 @@
 package ru.mirea.task4.Zadanie1;
 
-public enum Season {
+public enum Season { // специальный тип данных, который задает строго ограниченный список фиксированных констант
     WINTER(-5.0) {
         @Override
         public String getDescription() {
-            return "Холодное время года";
+            return super.getDescription();
         }
     },
     SPRING(10.0) {
         @Override
         public String getDescription() {
-            return "Холодное время года";
+            return super.getDescription();
         }
     },
     SUMMER(25.0) {
@@ -22,7 +22,7 @@ public enum Season {
     AUTUMN(8.0) {
         @Override
         public String getDescription() {
-            return "Холодное время года";
+            return super.getDescription();
         }
     };
 

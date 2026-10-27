@@ -1,11 +1,13 @@
+package ru.mirea.task2.Zadanie4;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 class Computer {
-    private String name;
-    private String cpu;
-    private int ram;
-    private int price;
+    private final String name;
+    private final String cpu;
+    private final int ram;
+    private final int price;
 
     public Computer(String name, String cpu, int ram, int price) {
         this.name = name;
@@ -27,7 +29,7 @@ class Computer {
 }
 
 public class Shop {
-    private ArrayList<Computer> computers = new ArrayList<>();
+    private final ArrayList<Computer> computers = new ArrayList<>();
 
     public void addComputer(Computer c) {
         computers.add(c);
@@ -59,7 +61,7 @@ public class Shop {
 
             if (choice == 0) break;
 
-            switch (choice) {
+            switch (choice) { // сравнивает choice с константами
                 case 1:
                     System.out.print("Название: ");
                     String name = sc.nextLine();

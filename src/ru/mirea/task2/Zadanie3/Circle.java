@@ -1,3 +1,5 @@
+package ru.mirea.task2.Zadanie3;
+
 public class Circle {
     private Point center;
     private double radius;

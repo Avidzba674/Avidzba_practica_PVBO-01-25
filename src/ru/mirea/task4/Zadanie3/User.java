@@ -10,7 +10,7 @@ public class User {
     }
 
     public boolean authenticate(String login, String password) {
-        return this.login.equals(login) && this.password.equals(password);
+        return this.login.equals(login) && this.password.equals(password); // используется для проверки, равен ли объект другому объекту
     }
 
     public String getLogin() { return login; }

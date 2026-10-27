@@ -9,7 +9,7 @@ class Dog {
         this.age = age;
     }
 
-    public String getName() { return name; }
+    public String getName() { return name; } // это специальные публичные методы, которые обеспечивают контролируемый доступ к приватным полям класса
     public void setName(String name) { this.name = name; }
 
     public int getAge() { return age; }

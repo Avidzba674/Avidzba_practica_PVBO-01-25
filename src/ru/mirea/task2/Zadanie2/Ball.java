@@ -1,9 +1,10 @@
+package ru.mirea.task2.Zadanie2;
 
 public class Ball {
     private double x = 0.0;
     private double y = 0.0;
 
-    public Ball(double x, double y) {
+    public Ball(double x, double y) { // конструктор
         this.x = x;
         this.y = y;
     }
@@ -13,11 +14,11 @@ public class Ball {
         this.y = 0.0;
     }
 
-    public double getX() {
+    public double getX() { // геттеры - возвращают значнеие поля
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(double x) { // сеттеры - устанавливают новое значение поля
         this.x = x;
     }
 
@@ -29,7 +30,7 @@ public class Ball {
         this.y = y;
     }
 
-    public void setXY(double x, double y) {
+    public void setXY(double x, double y) { // задает сразу две координаты
         this.x = x;
         this.y = y;
     }

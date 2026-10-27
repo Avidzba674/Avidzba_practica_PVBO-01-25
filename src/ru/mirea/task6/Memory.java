@@ -1,7 +1,7 @@
 package ru.mirea.task6;
 
-public class Memory implements Printable {
-    private final String type;     // DDR4 / DDR5
+public class Memory implements Printable { //класс берет на себя обязательство реализовать контракт
+    private final String type;
     private final int sizeGB;
     private final int frequencyMHz;
 
