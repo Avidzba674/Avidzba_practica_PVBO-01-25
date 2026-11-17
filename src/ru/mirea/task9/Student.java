@@ -23,7 +23,7 @@ public class Student implements Comparable<Student> {
     public void setGpa(double gpa) { this.gpa = gpa; }
 
     // отрицательное - этот студент раньше, положительное - позже, 0 - равны
-    @Override
+    @Override //аннотация
     public int compareTo(Student other) {
         return Integer.compare(this.iDNumber, other.iDNumber);
     }

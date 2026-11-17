@@ -2,7 +2,7 @@ package ru.mirea.task8;
 
 import java.util.Scanner;
 
-public class zadanie3 {
+public class zadanie3 { // выводит от A до B
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите A и B (каждое с новой строки):");

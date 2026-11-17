@@ -1,23 +1,21 @@
 package ru.mirea.task9;
 
-public class InsertionSortTest {
+public class InsertionSortTest { //вставками
 
-    // сортировка вставками для ЛЮБЫХ Comparable-объектов (полиморфизм)
-    public static void insertionSort(Comparable[] list) {
+    public static <T extends Comparable<T>> void insertionSort(T[] list) { //generic (для любого Т который умеет сравнивать себя с другим Т)
         for (int i = 1; i < list.length; i++) {
-            Comparable key = list[i];        // элемент, который вставляем
+            T key = list[i];
             int j = i - 1;
-            // сдвигаем вправо всё, что больше key
-            while (j >= 0 && list[j].compareTo(key) > 0) {
+            while (j >= 0 && list[j].compareTo(key) > 0) { // сравнивание list[j] c key
                 list[j + 1] = list[j];
                 j--;
             }
-            list[j + 1] = key;               // вставляем на освободившееся место
+            list[j + 1] = key;
         }
     }
 
-    public static void printArray(Object[] array) {
-        for (Object o : array) {
+    public static <T> void printArray(T[] array) {
+        for (T o : array) { // для любого о типа Т из массива array выполни цикл
             System.out.println(o);
         }
         System.out.println();
@@ -36,11 +34,9 @@ public class InsertionSortTest {
         printArray(students);
 
         insertionSort(students);
-
         System.out.println("После сортировки вставками по iDNumber:");
         printArray(students);
 
-        // тот же метод сортирует и строки - String тоже реализует Comparable
         String[] names = {"Олег", "Анна", "Пётр", "Иван"};
         insertionSort(names);
         System.out.println("Тот же метод для строк:");

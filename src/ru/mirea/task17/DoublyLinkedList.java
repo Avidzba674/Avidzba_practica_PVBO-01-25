@@ -1,7 +1,7 @@
 package ru.mirea.task17;
 
 
-public class DoublyLinkedList implements StudentList {
+public class DoublyLinkedList implements StudentList { //каждый узел знает и следующего, и предыдущего.
 
     private static class Node {
         Student data;

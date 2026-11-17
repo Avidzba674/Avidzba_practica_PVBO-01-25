@@ -1,7 +1,7 @@
 package ru.mirea.task17;
 
 
-public class CircularList implements StudentList {
+public class CircularList implements StudentList { //структура данных, где последний узел ссылается на первый, образуя замкнутое кольцо.
 
     private static class Node {
         Student data;

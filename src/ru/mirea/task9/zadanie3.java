@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class zadanie3 {
+public class zadanie3 { //слиянием
 
     // сортировка слиянием для списка
     public static List<Student> mergeSort(List<Student> list) {

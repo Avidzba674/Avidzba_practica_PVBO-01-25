@@ -1,7 +1,7 @@
 package ru.mirea.task17;
 
 
-public class SinglyLinkedList implements StudentList {
+public class SinglyLinkedList implements StudentList { //Каждый узел знает только следующего, назад пути нет.
 
     // узел списка: данные + ссылка на следующий узел
     private static class Node {
