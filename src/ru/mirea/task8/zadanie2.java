@@ -2,7 +2,7 @@ package ru.mirea.task8;
 
 import java.util.Scanner;
 
-public class zadanie2 {
+public class zadanie2 { // последовательнотсть
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите n: ");

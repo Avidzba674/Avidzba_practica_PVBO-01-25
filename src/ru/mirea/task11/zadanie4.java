@@ -19,7 +19,6 @@ public class zadanie4 {
         System.out.print("Минуты: ");
         int minutes = in.nextInt();
 
-        // Calendar: месяцы нумеруются с 0, поэтому month - 1
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, day, hours, minutes, 0);
         calendar.set(Calendar.MILLISECOND, 0);

@@ -3,21 +3,15 @@ package ru.mirea.task10;
 import java.util.Arrays;
 import java.util.Comparator;
 
-// Сам класс реализует Comparator: сравнение по итоговому баллу по убыванию
 public class SortingStudentsByGPA implements Comparator<Student> {
 
-    // поле-массив студентов (по заданию называется iDNumber)
     private static Student[] iDNumber;
 
     @Override
     public int compare(Student a, Student b) {
-        // переставленные аргументы дают порядок по убыванию
         return Double.compare(b.getGpa(), a.getGpa());
     }
 
-    // ---------- Задание 2 ----------
-
-    // 1) заполнение массива
     public static void setArray() {
         iDNumber = new Student[] {
                 new Student("Иван", "Иванов", "ПИ", 2, "ИКБО-01", 4.2),
@@ -28,18 +22,16 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         };
     }
 
-    // 2) быстрая сортировка массива iDNumber по среднему баллу (по убыванию)
     public static void quicksort() {
         quickSort(iDNumber, 0, iDNumber.length - 1, new SortingStudentsByGPA());
     }
 
-    // быстрая сортировка с любым компаратором
     public static void quickSort(Student[] array, int low, int high,
                                  Comparator<Student> comparator) {
-        if (low >= high) {                           // базовый случай
+        if (low >= high) {
             return;
         }
-        Student pivot = array[(low + high) / 2];     // опорный элемент
+        Student pivot = array[(low + high) / 2];
         int i = low;
         int j = high;
         while (i <= j) {
@@ -57,25 +49,23 @@ public class SortingStudentsByGPA implements Comparator<Student> {
                 j--;
             }
         }
-        quickSort(array, low, j, comparator);        // левая часть
-        quickSort(array, i, high, comparator);       // правая часть
+        quickSort(array, low, j, comparator);
+        quickSort(array, i, high, comparator);
     }
 
-    // 2) сортировка слиянием с любым компаратором (рекурсивная)
     public static void mergeSort(Student[] array, Comparator<Student> comparator) {
-        if (array.length < 2) {                      // базовый случай
+        if (array.length < 2) {
             return;
         }
         int middle = array.length / 2;
         Student[] left = Arrays.copyOfRange(array, 0, middle);
         Student[] right = Arrays.copyOfRange(array, middle, array.length);
 
-        mergeSort(left, comparator);                 // сортируем левую половину
-        mergeSort(right, comparator);                // сортируем правую половину
-        merge(array, left, right, comparator);       // сливаем в исходный массив
+        mergeSort(left, comparator);
+        mergeSort(right, comparator);
+        merge(array, left, right, comparator);
     }
 
-    // слияние двух отсортированных массивов в result
     private static void merge(Student[] result, Student[] left, Student[] right,
                               Comparator<Student> comparator) {
         int i = 0, j = 0, k = 0;
@@ -94,7 +84,6 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         }
     }
 
-    // 3) вывод массива студентов
     public static void outArray(Student[] array) {
         for (Student s : array) {
             System.out.println(s);
@@ -102,24 +91,20 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         System.out.println();
     }
 
-    // ---------- Задание 3 ----------
-
-    // объединяет два списка в один отсортированный
     public static Student[] mergeLists(Student[] list1, Student[] list2,
                                        Comparator<Student> comparator) {
         Student[] a = list1.clone();
         Student[] b = list2.clone();
-        mergeSort(a, comparator);                    // сортируем первый список
-        mergeSort(b, comparator);                    // сортируем второй список
+        mergeSort(a, comparator);
+        mergeSort(b, comparator);
         Student[] result = new Student[a.length + b.length];
-        merge(result, a, b, comparator);             // сливаем
+        merge(result, a, b, comparator);
         return result;
     }
 
     public static void main(String[] args) {
         Comparator<Student> byGpa = new SortingStudentsByGPA();
 
-        // Задание 2: быстрая сортировка по GPA по убыванию
         setArray();
         System.out.println("Исходный массив:");
         outArray(iDNumber);
@@ -128,13 +113,11 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         System.out.println("Quick sort по GPA (по убыванию):");
         outArray(iDNumber);
 
-        // Задание 2: сортировка слиянием по GPA по убыванию
         setArray();
         mergeSort(iDNumber, byGpa);
         System.out.println("Merge sort по GPA (по убыванию):");
         outArray(iDNumber);
 
-        // Задание 2, пункт 4: сортировка по другому полю (по фамилии)
         Comparator<Student> byLastName = new Comparator<Student>() {
             @Override
             public int compare(Student a, Student b) {
@@ -145,7 +128,6 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         System.out.println("Merge sort по фамилии:");
         outArray(iDNumber);
 
-        // Задание 3: объединение двух списков в один отсортированный
         Student[] list1 = {
                 new Student("Иван", "Иванов", "ПИ", 2, "ИКБО-01", 4.2),
                 new Student("Пётр", "Петров", "ПИ", 3, "ИКБО-02", 3.8),

@@ -16,7 +16,7 @@ public class zadanie2 {
 
         try {
             Date entered = format.parse(text);
-            Date now = new Date();   // текущее системное время
+            Date now = new Date();
 
             System.out.println("Текущая дата: " + format.format(now));
             System.out.println("Введённая дата: " + format.format(entered));
