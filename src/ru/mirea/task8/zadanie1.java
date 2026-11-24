@@ -2,7 +2,7 @@ package ru.mirea.task8;
 
 import java.util.Scanner;
 
-public class zadanie1 { // числа i повторяются i раз
+public class zadanie1 { // числа n повторяются n раз
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите n: ");

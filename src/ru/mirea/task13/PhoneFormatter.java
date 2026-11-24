@@ -5,7 +5,6 @@ public class PhoneFormatter {
     public static String format(String phone) {
         String p = phone.trim();
 
-        // российский формат 8XXXXXXXXXX заменяем на +7XXXXXXXXXX
         if (p.startsWith("8") && p.length() == 11) {
             p = "+7" + p.substring(1);
         }
